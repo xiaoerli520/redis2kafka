@@ -1,0 +1,38 @@
+settings:
+  maxRedisList: 10
+  maxBlock: 3000
+  metaDataMaxAge: 10000
+  requestTimeOut: 5000
+  kafkaTimeOut: 2       # second
+  redisPopTimeOut: 5    # second
+  mailTo: guoqingzhe@hotmail.com
+  debugListLenSleep: 5
+  listLongSleep: 30
+  listSleep: 60
+  redisTimeoutSleep: 20
+  kafkaTimeoutSleep: 20
+  kafkaNoLeaderSleep: 20
+  BaseExceptionSleep: 10
+  ThreadsNumberPerTask: 2
+
+kafka:
+  DevOps:
+    servers:
+      - local.cms.kafka.com:9092
+    actionTopics:
+      aspectLog:
+        topic: test1
+        username:
+        password:
+        apiVersion: "0.10"
+        redis:
+          dsn: 127.0.0.1:6379
+          queue_key: devops_aspectlog
+      test:
+        topic: test1
+        username:
+        password:
+        apiVersion: "0.10"
+        redis:
+          dsn: 127.0.0.1:6379
+          queue_key: devops_test
